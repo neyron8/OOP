@@ -190,7 +190,7 @@ int delete_it(int v)
 {
 	Node *N=lookup(v);
 	if(!N) return 0;
-	Splay(N); //check once more;
+	Splay(N); 
 	Node *P=N->left;
 	if(!P)
 	{
