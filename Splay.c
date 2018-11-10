@@ -190,7 +190,7 @@ int delete_it(int v)
 {
 	Node *N=lookup(v);
 	if(!N) return 0;
-	Splay(N); 
+	Splay(N);
 	Node *P=N->left;
 	if(!P)
 	{
@@ -212,28 +212,12 @@ int delete_it(int v)
 }
 int main()
 {
-	while(1)
-	{
-		int t;
-		scanf("%d",&t);
-		if(t!=0 && t!=-1) Insert(t);
-		else if(t==0)
-		{
-			scanf("%d",&t);
-			if(!lookup(t))
-				printf("Couldn't Find %d!\n",t);
-			else
-				printf("Found %d!\n",t);
-		}
-		else
-		{
-			scanf("%d",&t);
-			if(delete_it(t))
-				printf("Deleted %d!\n",t);
-			else
-				printf("Couldn't Find %d!\n",t);
-		}
-		if(root) printf("root: %d\n",root->value);
-		show_it(root);
-	}
+    Insert(23);
+    Insert(33);
+    Insert(223);
+    Insert(2433);
+    Insert(213);
+    Insert(2543);
+    Insert(1323);
+    show_it(root);
 }
