@@ -1,0 +1,58 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+
+	text-align: center;
+}
+
+main {
+	display: grid;
+}
+
+.table {
+	display: grid;
+
+	border: 3px solid black;
+	background-color: black;
+
+	grid-row-gap: 2px;
+}
+
+.table > div {
+	display: inline-grid;
+
+	background-color: black;
+
+	grid-column-gap: 2px;
+
+	grid-template: 1fr / repeat(8, 1fr);
+}
+
+.table div > div {
+	padding: 7px;
+	display: flex;
+
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+
+	background-color: white;
+}
+
+#first > div {
+	padding: 5px;
+	background-color: gray;
+}
+
+#large > div {
+	background-color: crimson;
+}
+
+#small > div {
+	background-color: dodgerblue;
+}
